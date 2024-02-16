@@ -1,0 +1,11 @@
+<%- include('./partials/head') %>
+
+<h1><%= squad.name %></h1>
+
+<a href="/">Back</a>
+
+<% persons.forEach(person => { %>
+    <li><a href="./person/<%= person.squad %>"><%= person.name %></a>, squad_id <%= person.squad_id %></li>
+  <% }) %>
+
+<%- include('./partials/foot') %>

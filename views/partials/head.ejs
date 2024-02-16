@@ -3,7 +3,27 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Squadpage</title>
+
+    <!-- pagina titel -->
+    <title>Seijno - Squadpage</title>
+
+    <!-- css links -->
+    <link rel="stylesheet" href="/styling/style.css">
+
+    <!-- script links -->
+    <script src="/public/scripts/script.js" defer=""></script>
+    
   </head>
   <body>  
-    <h1>Squadpage</h1>
+    <h1>Squad kiezen</h1>
+    <nav>
+      <ul>
+        <% squads.forEach(squad => { %>
+        <li class="squadNav">
+          <a href="./squad/<%= squad.id %>">
+            <h2>Squad <%= squad.name %></h2>
+          </a>
+        </li>
+        <% }) %>
+      </ul>
+    </nav>
